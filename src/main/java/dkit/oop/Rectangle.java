@@ -1,53 +1,24 @@
-package dkit.oop;     // SOLUTION
+package dkit.oop;   // TODO Exercises - see Circle class for guidance
 
 //TODO
 // change Rectangle declaration so that Rectangle inherits from Shape
+// Look at the Circle class for comparison.
 
-public class Rectangle extends Shape{
+public class Rectangle{
 
     //TODO
     // Rectangle requires fields 'width' and 'height'.
-    private int width;
-    private int height;
 
-    // constructor
 
-    public Rectangle(int x, int y, int width, int height) {
-        super(x, y);
-        this.width = width;
-        this.height = height;
-    }
+    //TODO add constructor
 
-    // implement toString() and getters/setters.
 
-    public int getWidth() {
-        return width;
-    }
+    //TODO - implement toString() and getters/setters.
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
 
-    public int getHeight() {
-        return height;
-    }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
 
-    @Override
-    public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", height=" + height +
-                "} " + super.toString();
-    }
-
-    // implement the area() method that is inherited from Shape
+    //TODO implement the abstract area() method that is inherited from Shape
     //
-    @Override
-    public double area() {
-        return width*height;
-    }
+
 }

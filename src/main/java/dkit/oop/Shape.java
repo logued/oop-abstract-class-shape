@@ -1,10 +1,12 @@
 package dkit.oop;
 
 // Abstract class
-// If we identify that there are a number of types of objects that have
+// If we identify that there are a number of different types of objects that have
 // a lot in common, then we can create an abstract class to represent
-// the generality of those objects.  In this abstract class we can define
+// the "generality" of those objects.  In this abstract class we can define
 // the fields and methods that are common to all the relevant objects.
+// We will never make an object of the Abstract class type as it is used
+// only as class that a similar set of classes can inherit from.
 //
 // A good example is when we want to represent shapes in a program.
 // We could reasonably identify that :
@@ -24,7 +26,7 @@ package dkit.oop;
 //   the class itself must be declared as abstract (as in this example)
 // - an abstract class can NOT be instantiated (i.e. it is not
 //   possible to create an object of the class using 'new Shape()' )
-//  ( we wouldn't want a shape object that wasn't of a particular type!)
+//  ( we wouldn't want a Shape object that wasn't of a particular type!)
 // - subclasses MUST implement all abstract methods e.g. area()
 //   (the compiler will indicate an error if a subclass does not
 //   implement a method that has been declared as 'abstract'
