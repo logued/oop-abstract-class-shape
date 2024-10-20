@@ -1,12 +1,12 @@
 package dkit.oop;
 
 /**
- * Represents a Circle object and extends Shape.
- * Circle is a "concrete" class, as we can instantiate Circle objects.
+ * Represents a Circle class that extends Shape.
+ * Circle is a "concrete" class, as we can instantiate(make) Circle objects.
  * Circle extends (inherits) from Shape, so creating an "is-a" relationship with Shape.
  * So, Circle is also of type Shape via inheritance.
  * The area() method inherited from Shape is defined as "abstract" in Shape, so
- * it has no implementation, but it must be implemented in Circle.
+ * it has no implementation, but it must be implemented below in Circle.
  * We implement area() in the Circle class with code that calculates the area
  * of a circle.
  *
@@ -17,7 +17,7 @@ public class Circle extends Shape {
 
     // fields x and y are inherited from the Shape superclass
 
-    private int radius;     // additional fields specific to Circle
+    private int radius;     // additional field specific to Circle
 
     public Circle(int x, int y, int radius) {
         super(x, y); //calls the superclass constructor to initialize x and y.
@@ -52,7 +52,7 @@ public class Circle extends Shape {
                 "radius=" + radius +
                 "} " + super.toString(); // call superclass toString method to get Shape details
     }
-    //     note that we can't directly access the values of x and y from this class, because
+    // Note that we can't directly access the values of x and y from this class, because
     // they are defined as private in the Shape superclass. So, we let the toString() of Shape
     // do the work for us, as it can access x and y.
 

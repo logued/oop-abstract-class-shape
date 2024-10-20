@@ -2,22 +2,23 @@ package dkit.oop;
 
 // Abstract class
 // If we identify that there are a number of different types of objects that have
-// a lot in common, then we can create an abstract class to represent
+// a lot in common, then we can create an "abstract" class to represent
 // the "generality" of those objects.  In this abstract class we can define
 // the fields and methods that are common to all the relevant objects.
-// We will never make an object of the Abstract class type as it is used
-// only as class that a similar set of classes can inherit from.
+// We will never make an object of the abstract class type as it is used
+// only as class to store common fields and methods that we would like
+// all sub-classes to have.
 //
 // A good example is when we want to represent shapes in a program.
 // We could reasonably identify that :
 // -- circle, rectangle, triangle, line are all shapes
 // - all shape objects must have a position, an (x,y) co-ordinate that represents
 //   the top left corner of the object's position (bounding rectangle).
-// - all shapes have an area, so we can provide an area() method to calculate the area.
+// - all shapes have an area, so we can declare an area() method to calculate the area.
 //
 // The position and area() are common to all shapes, so we can create a class
-// called Shape and define the (x,y) fields and the area() method in it.
-// However, we can not implement the area() method in Shape,as the area
+// called Shape and define the (x,y) fields and declare the area() method in it.
+// However, we can not implement the area() method in Shape, as the area
 // will depend on the type or the shape, which will be defined in a "concrete class"
 // such as Circle or Rectangle.  A method with only a header but no implementation
 // is called an abstract method.  So, area() is an abstract method here.
@@ -34,7 +35,7 @@ package dkit.oop;
 //
 // - the area() method is declared as "abstract", so developers who
 //   extend this class must implement an area() method. In this way we can
-//   force all subclasses to provide an area() method.
+//   'force' all subclasses to provide an area() method.
 
 // Class designers sometimes create an abstract class to represent a general concept,
 // and when specific concrete classes are defined, they are required to extend
@@ -46,6 +47,7 @@ package dkit.oop;
 // all concrete classes (as long as they extend Shape).
 
 public abstract class Shape {
+
     // position top left corner - required in all subclasses
     private int x;
     private int y;
@@ -56,8 +58,7 @@ public abstract class Shape {
     }
 
     /**
-     * area() - Abstract method that must be implemented by all subclasses that extend
-     * this class. Declaring the method as 'abstract' will force classes that
+     * area() -  Declaring the method as 'abstract' will force classes that
      * inherit from this class to implement the method.
      *
      * @return area of the shape
@@ -66,7 +67,8 @@ public abstract class Shape {
     public abstract double area();   // no method body allowed
 
 
-    // methods common to all Shape objects
+    // Methods common to all Shape objects.
+    // These are inherited in all subclasses.
     public int getX() { return x; }
     public void setX(int x) { this.x = x;}
     public int getY() { return y; }
